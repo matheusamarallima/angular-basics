@@ -37,7 +37,6 @@ export class CreateComponent {
 
   onSubmit(){
 
-
     this.productsService.post({
       title: this.form.controls.title.value
 

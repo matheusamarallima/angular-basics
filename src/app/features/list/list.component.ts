@@ -5,6 +5,7 @@ import {MatCardModule} from "@angular/material/card";
 import {MatAnchor, MatButton} from "@angular/material/button";
 import {CardComponent} from "./components/card/card.component";
 import {Router, RouterLink} from "@angular/router";
+import {Product} from "../../shared/interfaces/product.interface";
 
 @Component({
   selector: 'app-list',
@@ -25,7 +26,7 @@ export class ListComponent {
     })
   }
 
-  onEdit(){
-    this.router.navigateByUrl("/edit-product")
+  onEdit(product: Product){
+    this.router.navigate(['/edit-product', product.id])
   }
 }

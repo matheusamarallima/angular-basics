@@ -22,4 +22,8 @@ export class CardComponent {
   productTitle = computed(()=> this.product().title)
   @Output() edit = new EventEmitter();
 
+  onEdit(){
+    this.edit.emit()
+  }
+
 }
